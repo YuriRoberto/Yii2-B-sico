@@ -43,14 +43,16 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules' => [
+                'teste/<id:\d+>' => 'teste/index',
+                'teste/<id:\d+>/<name>' => 'teste/mais-parametros'
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];

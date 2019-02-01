@@ -15,4 +15,9 @@ class TesteController extends \yii\web\Controller
         ]);
     }
 
+    public function actionMaisParametros($id,$name){
+        echo "$id - $name";die();
+        
+    }
+
 }
