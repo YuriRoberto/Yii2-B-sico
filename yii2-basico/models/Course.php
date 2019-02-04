@@ -10,4 +10,10 @@ class Course extends ActiveRecord{
         return 'courses';
     }
 
+    public function rules(){
+
+        return [
+            [['name', 'hours'], 'safe']
+        ];
+    }
 }

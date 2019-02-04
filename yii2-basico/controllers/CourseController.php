@@ -16,6 +16,13 @@ class CourseController extends \yii\web\Controller
 
     public function actionCreate()
     {
+        $request = \Yii::$app->request;
+        if($request->isPost){
+            $model = new Course();
+            $model->attributes = $request->post();
+            $model->save();
+            return $this->redirect(['course/index']);
+        }
         return $this->render('create');
     }
 
