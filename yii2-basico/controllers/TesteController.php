@@ -6,13 +6,11 @@ class TesteController extends \yii\web\Controller
 {
     public function actionIndex($id = 500)
     {
-        $request = \Yii::$app->request;
-
-        $xpto = $request->get('xpto');
-        return $this->render('index', [
-            'id' => $id,
-            'xpto' => $xpto
-        ]);
+        $courses = Course::find()->all();
+        foreach($courses as $course){
+            echo "{$course->id} - {$course->name} - {$course->hours}<br/>";
+        }
+        die();
     }
 
     public function actionMaisParametros($id,$name){
