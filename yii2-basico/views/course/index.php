@@ -1,9 +1,26 @@
 <?php
 /* @var $this yii\web\View */
 ?>
-<h1>course/index</h1>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+<h1>Listagem de cursos</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Hours</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <?php foreach ($courses as $course):?>
+            <tr>
+                <td><?php echo $course->id; ?></td>
+                <td><?php echo $course->name; ?></td>
+                <td><?php echo $course->hours; ?></td>
+            </tr>
+        <?php endforeach; ?>    
+    </tbody>
+
+</table>
