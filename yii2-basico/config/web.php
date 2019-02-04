@@ -42,14 +42,15 @@ $config = [
                 ],
             ],
         ],
-        'db' => $db,
+        'db' => require(__DIR__ . '/db.php'),
         
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => true,
+            'showScriptName' => false,
             'rules' => [
                 'teste/<id:\d+>' => 'teste/index',
-                'teste/<id:\d+>/<name>' => 'teste/mais-parametros'
+                'teste/<id:\d+>/<name>' => 'teste/mais-parametros',
+                'course/<id:\d+>/update' => 'course/update'
             ],
         ],
         

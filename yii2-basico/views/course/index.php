@@ -15,6 +15,7 @@ use yii\helpers\Url;
         <th>#</th>
         <th>Name</th>
         <th>Hours</th>
+        <th>Ações</th>
     </tr>
     </thead>
 
@@ -24,6 +25,9 @@ use yii\helpers\Url;
                 <td><?php echo $course->id; ?></td>
                 <td><?php echo $course->name; ?></td>
                 <td><?php echo $course->hours; ?></td>
+                <td>
+                    <a href="<?php echo Url::to(['course/update', 'id' => $course->id]); ?>">Editar</a>
+                </td>
             </tr>
         <?php endforeach; ?>    
     </tbody>
