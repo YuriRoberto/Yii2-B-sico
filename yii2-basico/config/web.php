@@ -50,7 +50,8 @@ $config = [
             'rules' => [
                 'teste/<id:\d+>' => 'teste/index',
                 'teste/<id:\d+>/<name>' => 'teste/mais-parametros',
-                'course/<id:\d+>/update' => 'course/update'
+                'course/<id:\d+>/update' => 'course/update',
+                'course/<id:\d+>/delete' => 'course/delete'
             ],
         ],
         
