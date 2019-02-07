@@ -62,4 +62,19 @@ class Employees extends \yii\db\ActiveRecord
     {
         return $this->hasOne(JobTitle::className(), ['id' => 'job_title_id']);
     }
+
+     public function fields(){
+    //     $fields = parent::fields();
+    //     unset($fields['avatar']);
+    //     return $fields;
+
+        return [
+            'id',
+            'email',
+            'fotinha' => 'avatar',
+            'full_name' => function($model){
+                return $model->first_name . " " . $model->last_name;
+            }
+        ];
+    }
 }
